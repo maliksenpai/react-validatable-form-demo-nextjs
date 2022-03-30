@@ -428,7 +428,7 @@ export const NavSidebar = ({ menuIsHidden, toggleDrawer }) => {
     return (
         <>
             <div
-                className={`${menuStatus} mysidemenu inset-y-0 left-0 z-30 overflow-y-auto transition duration-300 ease-out transform translate-x-0 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${'ease-out translate-x-0'}`}
+                className={`${menuStatus} mysidemenu inset-y-0 left-0 z-30 overflow-y-auto transition duration-300 ease-out transform translate-x-0 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${'ease-build translate-x-0'}`}
             >
                 <div className={'navbar-area'}>
                     <TextField

@@ -5,12 +5,12 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import SubComponent from './sub-component';
 import { Dialog, DialogTitle } from '@mui/material';
 import ValidationResult from '../../components/ValidationResult';
 import CurrentRulesInfo from '../../components/CurrentRulesInfo';
 import ExampleUsageWrapper from '../../components/ExampleUsageWrapper';
 import FormSubmitResult from '../../components/FormSubmitResult';
+import SubComponent from "../../components/SubComponent";
 
 const disableSubkey2 = (formData, index) => {
     return formData.disableAllSubkey2Rule || formData.listChild[index].disableSubkey2Rule;
@@ -143,7 +143,7 @@ const ValidateComplexForms = () => {
             header="Validate Complex Forms"
             codeUrl={[
                 'components/advanced/validate-complex-forms.js',
-                'components/advanced/sub-component.js',
+                'components/advanced/SubComponent.js',
             ]}
         >
             <p className="infoParagraph">

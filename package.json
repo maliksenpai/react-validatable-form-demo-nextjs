@@ -2,11 +2,14 @@
   "name": "react-validatable-form-demo-nextjs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maliksenpai.github.io/react-validatable-form-demo-nextjs/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "lint": "next lint",
+    "deploy": "rimraf node_modules/.cache/gh-pages && gh-pages -b gh-pages -d build"
   },
   "dependencies": {
     "@date-io/date-fns": "2.11.0",
