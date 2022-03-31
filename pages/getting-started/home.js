@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react';
+import {prefix} from "../../utils/prefix";
 
 const npmCommand = 'npm install react-validatable-form';
 const yarnCommand = 'yarn add react-validatable-form';
@@ -41,7 +42,7 @@ const Home = () => {
             rowGap={5}
             pt={2}
         >
-            <img width={'200px'} height={'200px'} src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/logo.png'} alt={'logo'} />
+            <img width={'200px'} height={'200px'} src={`${prefix}/logo.png`} alt={'logo'} />
             <Typography variant={'h3'}> react-validatable-form </Typography>
             <Typography variant={'h6'}>
                 {' '}

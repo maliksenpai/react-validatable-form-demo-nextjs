@@ -38,6 +38,7 @@ import {NavSidebar} from "../components/NavSidebar";
 import {ReactValidatableFormProvider} from "react-validatable-form";
 import {LocalizationProvider} from "@mui/lab";
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import {prefix} from "../utils/prefix";
 
 const MyCustomRuleFunction = (ruleParams) => {
     const {value} = ruleParams;
@@ -312,7 +313,7 @@ function MyApp({Component, pageProps}) {
     return <div>
         <div className={'obssTriangle'}>
             <a className={'triangleIcon'} href={'https://obss.com.tr/'} target={'_blank'} rel="noreferrer">
-                <Image src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/obss.png'} width={'50px'} height={'50px'} alt={'obss'}/>
+                <img src={`${prefix}/obss.png`} width={'50px'} height={'50px'} alt={'obss'}/>
             </a>
         </div>
         <Box flexGrow={1}>
@@ -323,7 +324,7 @@ function MyApp({Component, pageProps}) {
                     </IconButton>
                         <Link href={'/'}>
                             <div className={"bannerImage"}>
-                                <Image src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/logo.png'} alt={'logo'} width={"48px"} height={"48px"} />
+                                <img src={`${prefix}/logo.png`} alt={'logo'} width={"48px"} height={"48px"} />
                             </div>
                         </Link>
                     <Link href={'/'}>

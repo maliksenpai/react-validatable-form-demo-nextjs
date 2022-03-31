@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import Image from 'next/image'
 import { SettingsOutlined } from '@mui/icons-material';
+import {prefix} from "../utils/prefix";
 
 const Settings = (props) => {
     const { openSettingsDialog } = props;
@@ -18,14 +19,14 @@ const Settings = (props) => {
             <Tooltip placement="bottom" title="View on GitHub">
                 <span className={'githubIcon'}>
                     <a href={'https://github.com/obss/react-validatable-form'} target="_blank" rel="noreferrer">
-                        <img src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/github.png'} width={"50%"} height={"50%"} alt="github_icon" />
+                        <img src={`${prefix}/github.png`} width={"50%"} height={"50%"} alt="github_icon" />
                     </a>
                 </span>
             </Tooltip>
             <Tooltip placement="bottom" title="View on npmjs">
                 <span className={'npmIcon'}>
                     <a href={'https://www.npmjs.com/package/react-validatable-form'} target="_blank" rel="noreferrer">
-                        <img src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/npm.png'} width={"50%"} height={"50%"} alt="npm_icon" />
+                        <img src={`${prefix}/npm.png`} width={"50%"} height={"50%"} alt="npm_icon" />
                     </a>
                 </span>
             </Tooltip>

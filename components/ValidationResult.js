@@ -1,20 +1,21 @@
 import Image from 'next/image'
+import {prefix} from "../utils/prefix";
 
 const ValidationResult = ({ isValid }) => {
-    let imgSrc = 'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/';
+    let imgSrc;
     let validationResultText = '';
     if (isValid) {
-        imgSrc += '/valid.png';
+        imgSrc = `${prefix}/valid.png`;
         validationResultText = 'valid';
     } else {
-        imgSrc += '/invalid.png';
+        imgSrc = `${prefix}/invalid.png`;
         validationResultText = 'invalid';
     }
 
     return (
         <div className={'validationResultDiv'}>
             <span>Validation Result: </span>
-            <Image src={imgSrc} alt="validationresult" width={24} height={24} className={'validationResultIcon'} />
+            <img src={imgSrc} alt="validationresult" width={24} height={24} className={'validationResultIcon'} />
             <span className={isValid ? 'validationResultInfoSuccess' : 'validationResultInfoFail'}>
                 {validationResultText}
             </span>
