@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react';
-import {prefix} from "../../utils/prefix";
+import {prefix} from "../utils/prefix";
 
 const npmCommand = 'npm install react-validatable-form';
 const yarnCommand = 'yarn add react-validatable-form';
