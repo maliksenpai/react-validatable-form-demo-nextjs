@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
 const ValidationResult = ({ isValid }) => {
-    let imgSrc;
+    let imgSrc = 'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/';
     let validationResultText = '';
     if (isValid) {
-        imgSrc = '/valid.png';
+        imgSrc += '/valid.png';
         validationResultText = 'valid';
     } else {
-        imgSrc = '/invalid.png';
+        imgSrc += '/invalid.png';
         validationResultText = 'invalid';
     }
 

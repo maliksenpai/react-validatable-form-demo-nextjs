@@ -312,7 +312,7 @@ function MyApp({Component, pageProps}) {
     return <div>
         <div className={'obssTriangle'}>
             <a className={'triangleIcon'} href={'https://obss.com.tr/'} target={'_blank'} rel="noreferrer">
-                <Image src={'/obss.png'} width={'50px'} height={'50px'} alt={'obss'}/>
+                <Image src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/obss.png'} width={'50px'} height={'50px'} alt={'obss'}/>
             </a>
         </div>
         <Box flexGrow={1}>
@@ -321,11 +321,11 @@ function MyApp({Component, pageProps}) {
                     <IconButton onClick={handleMenuButton} className="menuButton">
                         <MenuIcon/>
                     </IconButton>
-                    <div className={"bannerImage"}>
                         <Link href={'/'}>
-                            <Image src={'/logo.png'} alt={'logo'} width={"48px"} height={"48px"} />
+                            <div className={"bannerImage"}>
+                                <Image src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/logo.png'} alt={'logo'} width={"48px"} height={"48px"} />
+                            </div>
                         </Link>
-                    </div>
                     <Link href={'/'}>
                         <a className={"bannerText"}>
                             <div className={"bannerLink"}>

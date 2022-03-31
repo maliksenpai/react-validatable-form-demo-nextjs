@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react';
-import Image from 'next/image';
 
 const npmCommand = 'npm install react-validatable-form';
 const yarnCommand = 'yarn add react-validatable-form';
@@ -31,8 +30,6 @@ const Home = () => {
         }, 1000);
     };
 
-    console.log(process.env.PATH)
-
     return (
         <Box
             className={'homeContainer'}
@@ -44,7 +41,7 @@ const Home = () => {
             rowGap={5}
             pt={2}
         >
-            <Image width={'200px'} height={'200px'} src={`/logo.png`} alt={'logo'} />
+            <img width={'200px'} height={'200px'} src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/logo.png'} alt={'logo'} />
             <Typography variant={'h3'}> react-validatable-form </Typography>
             <Typography variant={'h6'}>
                 {' '}
@@ -158,7 +155,7 @@ const Home = () => {
                 </Button>
             </Box>
             <video width={'500px'} autoPlay loop playsInline muted>
-                <source src={process.env.PUBLIC_URL + '/example_video.mp4'} type={'video/mp4'} />
+                <source src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs//example_video.mp4'} type={'video/mp4'} />
             </video>
         </Box>
     );
