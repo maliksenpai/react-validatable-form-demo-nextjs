@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useState } from 'react';
-import Image from 'next/image';
+import {prefix} from "../../utils/prefix";
 
 const npmCommand = 'npm install react-validatable-form';
 const yarnCommand = 'yarn add react-validatable-form';
@@ -42,7 +42,7 @@ const Home = () => {
             rowGap={5}
             pt={2}
         >
-            <Image width={'200px'} height={'200px'} src={'/logo.png'} alt={'logo'} />
+            <img width={'200px'} height={'200px'} src={`${prefix}/logo.png`} alt={'logo'} />
             <Typography variant={'h3'}> react-validatable-form </Typography>
             <Typography variant={'h6'}>
                 {' '}
@@ -156,7 +156,7 @@ const Home = () => {
                 </Button>
             </Box>
             <video width={'500px'} autoPlay loop playsInline muted>
-                <source src={process.env.PUBLIC_URL + '/example_video.mp4'} type={'video/mp4'} />
+                <source src={`${prefix}/example_video.mp4`} type={'video/mp4'} />
             </video>
         </Box>
     );

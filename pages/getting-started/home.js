@@ -156,7 +156,7 @@ const Home = () => {
                 </Button>
             </Box>
             <video width={'500px'} autoPlay loop playsInline muted>
-                <source src={'https://maliksenpai.github.io/react-validatable-form-demo-nextjs//example_video.mp4'} type={'video/mp4'} />
+                <source src={`${prefix}/example_video.mp4`} type={'video/mp4'} />
             </video>
         </Box>
     );
