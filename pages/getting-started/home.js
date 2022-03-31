@@ -42,7 +42,7 @@ const Home = () => {
             rowGap={5}
             pt={2}
         >
-            <Image width={'200px'} height={'200px'} src={'/logo.png'} alt={'logo'} />
+            <Image width={'200px'} height={'200px'} src={`${process.env.PATH}/logo.png`} alt={'logo'} />
             <Typography variant={'h3'}> react-validatable-form </Typography>
             <Typography variant={'h6'}>
                 {' '}

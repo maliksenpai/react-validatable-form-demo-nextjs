@@ -17,6 +17,7 @@ import './../styles/MyBootstrap.css'
 import './../styles/CustomElementFocusHandler.css'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import {
     AppBar,
     Autocomplete,
@@ -39,7 +40,7 @@ import {LocalizationProvider} from "@mui/lab";
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 
 const MyCustomRuleFunction = (ruleParams) => {
-    const { value } = ruleParams;
+    const {value} = ruleParams;
 
     if (!value) {
         return 'this field is a required field';
@@ -53,21 +54,21 @@ const MyCustomRuleFunction = (ruleParams) => {
 };
 
 const MyCustomRule2Function = (ruleParams) => {
-    const { value } = ruleParams;
+    const {value} = ruleParams;
 
     if (!value) {
         return {};
     }
 
     if (!value.includes('a') && value.length < 5) {
-        return { value: value };
+        return {value: value};
     }
 
     return null;
 };
 
 const MyCustomRule3Function = (ruleParams) => {
-    const { value } = ruleParams;
+    const {value} = ruleParams;
 
     if (!value) {
         return <span>this field is a required field</span>;
@@ -172,7 +173,7 @@ function MyApp({Component, pageProps}) {
     };
 
     const handleSettingChange = (key, value) => {
-        const newSettings = { ...currentSettings };
+        const newSettings = {...currentSettings};
         newSettings[key] = value;
         if (key === 'translationsEnabled' && !value) {
             if (currentSettings.lang === 'de') {
@@ -225,8 +226,8 @@ function MyApp({Component, pageProps}) {
                     handleSettingChange('lang', newValue);
                 }}
                 options={currentLangOptions}
-                renderInput={(params) => <TextField {...params} label="lang" />}
-                style={{ width: 200 }}
+                renderInput={(params) => <TextField {...params} label="lang"/>}
+                style={{width: 200}}
             />
             <FormControlLabel
                 control={
@@ -320,15 +321,24 @@ function MyApp({Component, pageProps}) {
                     <IconButton onClick={handleMenuButton} className="menuButton">
                         <MenuIcon/>
                     </IconButton>
-                    <div className={"bannerLink"}>
-                        <span className="bannerText">react-validatable-form</span>
+                    <div className={"bannerImage"}>
+                        <Link href={'/'}>
+                            <Image src={'/logo.png'} alt={'logo'} width={"48px"} height={"48px"} />
+                        </Link>
                     </div>
+                    <Link href={'/'}>
+                        <a className={"bannerText"}>
+                            <div className={"bannerLink"}>
+                                react-validatable-form
+                            </div>
+                        </a>
+                    </Link>
                     <Box flexGrow={1}/>
                     <Settings openSettingsDialog={openSettingsDialog}/>
                 </Toolbar>
             </AppBar>
         </Box>
-        <MainDrawer anchor={anchor} open={anchor} toggleDrawer={toggleDrawer} />
+        <MainDrawer anchor={anchor} open={anchor} toggleDrawer={toggleDrawer}/>
         <Dialog open={settingsDialogOpen} onClose={() => setSettingsDialogOpen(false)}>
             <DialogTitle>
                 <ExampleUsageWrapper
@@ -340,7 +350,9 @@ function MyApp({Component, pageProps}) {
             {dialogContent}
         </Dialog>
         <div style={{display: "flex"}}>
-            <NavSidebar toggleDrawer={toggleDrawer} menuIsHidden={menuIsHidden} />
+            <div className={"navbarDiv"}>
+                <NavSidebar toggleDrawer={toggleDrawer} menuIsHidden={menuIsHidden}/>
+            </div>
             <div className={"generalDiv"}>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <ReactValidatableFormProvider
