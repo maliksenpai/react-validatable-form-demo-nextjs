@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: 'https://maliksenpai.github.io/react-validatable-form-demo-nextjs/',
+  basePath: '/react-validatable-form-demo-nextjs',
+  assetPrefix: '/react-validatable-form-demo-nextjs',
   images: {
     loader: "akamai",
     path: '',
