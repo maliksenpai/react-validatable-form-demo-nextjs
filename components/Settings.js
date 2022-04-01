@@ -6,7 +6,7 @@ import {prefix} from "../utils/prefix";
 
 const Settings = (props) => {
     const { openSettingsDialog } = props;
-    const versionInfo = `Version: ${process.env.REACT_APP_VERSION}`;
+    const versionInfo = `Version: ${process.env.VERSION}`;
 
     return (
         <div className={'settings-div'}>

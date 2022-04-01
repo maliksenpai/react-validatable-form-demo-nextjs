@@ -225,6 +225,7 @@ function MyApp({Component, pageProps}) {
                 value={currentSettings.lang}
                 onChange={(event, newValue) => {
                     handleSettingChange('lang', newValue);
+                    console.log(newValue);
                 }}
                 options={currentLangOptions}
                 renderInput={(params) => <TextField {...params} label="lang"/>}
@@ -323,9 +324,9 @@ function MyApp({Component, pageProps}) {
                         <MenuIcon/>
                     </IconButton>
                         <Link href={'/'}>
-                            <div className={"bannerImage"}>
+                            <a>
                                 <img src={`${prefix}/logo.png`} alt={'logo'} width={"48px"} height={"48px"} />
-                            </div>
+                            </a>
                         </Link>
                     <Link href={'/'}>
                         <a className={"bannerText"}>
@@ -357,6 +358,7 @@ function MyApp({Component, pageProps}) {
             <div className={"generalDiv"}>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <ReactValidatableFormProvider
+                        lang={currentSettings.lang}
                         customRules={customRules}
                         translations={translations}
                         dateFormatterFunction={dateFormatterFunction}
