@@ -15,6 +15,9 @@ import './../styles/Installation.css'
 import './../styles/Usage.css'
 import './../styles/MyBootstrap.css'
 import './../styles/CustomElementFocusHandler.css'
+import 'primereact/resources/primereact.min.css'
+import 'primereact/resources/themes/saga-blue/theme.css'
+import '../styles/antd.css';
 
 import Image from 'next/image'
 import Link from 'next/link'
